@@ -1,0 +1,122 @@
+Delivered-To: davi123dtran123@gmail.com
+Received: by 2002:a54:288b:0:0:0:0:0 with SMTP id c11csp1060895ecr;
+        Wed, 2 Dec 2020 11:49:59 -0800 (PST)
+X-Received: by 2002:aa7:9f0f:0:b029:19b:c68f:61cd with SMTP id g15-20020aa79f0f0000b029019bc68f61cdmr3990115pfr.45.1606938599181;
+        Wed, 02 Dec 2020 11:49:59 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1606938599; cv=none;
+        d=google.com; s=arc-20160816;
+        b=xtxsCTBeHS6Z9bPLtYrWlRGs1SHLFcDJGmsgN4kcYvxwtaqIFoJZD3n7CP6I4NC3GX
+         v4pRe9ZZ7ql5DZGZ8nvZo28We6GrrHTHAeQGO3gIr7s/rC/9gZ0wznvrMwSOmccg8yjs
+         KJmugGxEPC5r8yKgz4JXvG1mNRIpAwK5SMqaaaLsPpOPM0K3/EiircmchL5zAkLFUJfQ
+         iuSnu5PNDzjHP2v68LI3aR2tgtieeA9JjngsbNSZnTVVjeAygqxnZukGM8O58ahqeOJ8
+         YnwpuAQW4LKCTLJSjnL+t++gI5CARKV/MooZXf2qS/jGdOgkK/38Maz5u+s6giXq4hBy
+         9C1A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:to:from:subject:message-id:date
+         :mime-version:dkim-signature;
+        bh=SgliuY5Ob/o0ZWM3OZNrUcEgOCTSrYdl2q/ZXMWWPiE=;
+        b=LeuhMwFCHMFDXYMWYelmeekXHfe4mr+1/rxeuoUVccB1lkJVH0npANDk8RQ292Pbjl
+         xUsL1br3HGFea8RpScuTbkU9dKNbxo+yqCIV+/iryILIrdldkF36uf2XLTj1//V9Vzl/
+         wMIR8J4a8z3M+gSbnW+JW7yA8r7xsCo5hAIGOLkubIMyolI/4/qO+1gDEItvGRONL7an
+         J1Mun0y+UWXyEXjY1F3d5eLvIMdMb6gy9QrYlTZx8RumbSw6cpc5vqyy6b6DL6ziPwsb
+         yo1T+hXsQv1+me5d0ycJhl4u6hLI6ui8H+eCkAIBFSRgokulWdo0jRG+g5B34ofoCXOb
+         5w4w==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@google.com header.s=20161025 header.b=ri07e415;
+       spf=pass (google.com: domain of forwarding-noreply@google.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=forwarding-noreply@google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com
+Return-Path: <forwarding-noreply@google.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id b12sor489556pgr.70.2020.12.02.11.49.59
+        for <davi123dtran123@gmail.com>
+        (Google Transport Security);
+        Wed, 02 Dec 2020 11:49:59 -0800 (PST)
+Received-SPF: pass (google.com: domain of forwarding-noreply@google.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@google.com header.s=20161025 header.b=ri07e415;
+       spf=pass (google.com: domain of forwarding-noreply@google.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=forwarding-noreply@google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20161025;
+        h=mime-version:date:message-id:subject:from:to
+         :content-transfer-encoding;
+        bh=SgliuY5Ob/o0ZWM3OZNrUcEgOCTSrYdl2q/ZXMWWPiE=;
+        b=ri07e415o7KL+OroSVIGGegKSQnVDDAEPNevEHczm8sipKm49d/ugQuy3XFOW5iQLC
+         VG5BXz3OGStFbV6g38uk6SyFXF+YqzfFL35+VcHv8IQ5taKInMXhfPmQw3JfrgPalpgp
+         XNjdHR/Sf69h228V65RMP68nuvN4mgvowPNi9L5aDa28BHTQSBiF1xXIoAW6Ga0htCc9
+         2bXPU0yHGB/99/DZhQyZdOMvhmDlkm5p7FBkEaz0rcYWCKVKwUJNL9XJnTMOnznX3m0J
+         d6pGe8yd5LF/dGtVWh8hvtKH3+p8O6saWokfkVQaCNFiq2DLj8NDkuOKY6hVQEnF20cj
+         YRjg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:date:message-id:subject:from:to
+         :content-transfer-encoding;
+        bh=SgliuY5Ob/o0ZWM3OZNrUcEgOCTSrYdl2q/ZXMWWPiE=;
+        b=ThNqUQXjjum0cIjg2b/I9SXDnJmUlT1PCixAln5RDYEw9i19MXUdN1TbJ8STiUZb4Z
+         62flD6Swj0d31yTu9sg4MiSFdVR9ILc4aotEDJDEgdib49Z8G5dYh0lVAE+RMf3rC4pF
+         E+FW/n/QgpMdCstVfs9Osnit38izJTNTpLlalwVCEnppNvCQ7A7rog4QuYQE/O+oerJt
+         zwVDK5S6VE+uyivDNewg9ZVQo1LBWve1I6SAn/PzGK+eligHwgXQCPB1c0a9hlLIBlBd
+         7xFJC7n75i/kN+QY0jSlmpEELTRWQnST8qyuwfxFbEu5+rNHogL5tesU5uTWidMLkM85
+         p8dg==
+X-Gm-Message-State: AOAM533a9CqYb9NIDmB0NsvoY+ULRBn4FzqPWo/9A4pta96mc+TIBgFk
+	G/lCubUc2ymVTNpc5OYKR5Ml76xZGHF9WU0G4/FxiAmZhcXZdu2WjTLGXeLUFmgyXQ==
+X-Google-Smtp-Source: ABdhPJx2v2BNEgO642z85tj1c5hWjeZGnt2PiR5WVSZjRzHDaGjWkUHvGcdx8Sj+b4shYv7OQnyjcLdYMQ6haO3q0F1dhmYk1oU/OA==
+MIME-Version: 1.0
+X-Received: by 2002:a65:6383:: with SMTP id h3mr1292872pgv.309.1606938598847;
+ Wed, 02 Dec 2020 11:49:58 -0800 (PST)
+X-Google-Address-Confirmation: cKrqNpUAauuXc_2G6GVfD-Pk9t8
+Date: Wed, 2 Dec 2020 20:49:58 +0100
+Message-ID: <CAGDv33KkoR+EeC5fSZ=3sZ=Ue=xn7h=3QEh4gw2vLvnOVH+jBg@mail.gmail.com>
+Subject: =?UTF-8?Q?=28850597656=29_Best=C3=A4tigen_der_Weiterleitung_aus_Gmail_?=
+	=?UTF-8?Q?=2D_E=2DMail=2DEmpfang_von_marcelmaurice3519=40gmail=2Ecom?=
+From: Gmail-Team <forwarding-noreply@google.com>
+To: davi123dtran123@gmail.com
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+marcelmaurice3519@gmail.com hat angefordert, dass E-Mails automatisch
+an Ihre E-Mail-Adresse davi123dtran123@gmail.com weitergeleitet
+werden.
+Best=C3=A4tigungscode: 850597656
+
+Klicken Sie zum Best=C3=A4tigen der Anforderung auf den folgenden Link, um
+marcelmaurice3519@gmail.com das automatische Weiterleiten von E-Mails
+an Ihre Adresse zu erlauben:
+
+https://mail-settings.google.com/mail/vf-%5BANGjdJ98M3flNdXvWphgxkv_kRFbeeW=
+72Hul67OoiFNuy2yPJx55Z64-3iAtV3-yDilvZmo925ySyhhTeSn9kSPED36R6QarQ6koEuuXPA=
+%5D-dPNkXT9KTjaaudmiHIdrlj5D1oo
+
+Scheint der Link besch=C3=A4digt zu sein, wenn Sie darauf klicken, kopieren
+Sie ihn und f=C3=BCgen Sie ihn in einem neuen Browserfenster ein. Falls Sie
+auf den Link nicht zugreifen k=C3=B6nnen, senden Sie den Best=C3=A4tigungsc=
+ode
+850597656 an marcelmaurice3519@gmail.com.
+
+Vielen Dank, dass Sie Gmail verwenden.
+
+Viele Gr=C3=BC=C3=9Fe
+
+Ihr Gmail-Team
+
+Wenn Sie dieser Anforderung nicht zustimmen, ist keine weitere Aktion
+erforderlich.
+marcelmaurice3519@gmail.com kann Nachrichten nur dann automatisch an
+Ihre E-Mail-Adresse weiterleiten, wenn Sie die Anforderung durch Klick
+auf den obigen Link best=C3=A4tigen. Falls Sie versehentlich auf den Link
+geklickt haben, ohne dem automatischen Weiterleiten von Nachrichten
+von marcelmaurice3519@gmail.com an Ihre E-Mail-Adresse zuzustimmen,
+k=C3=B6nnen Sie die Best=C3=A4tigung widerrufen. Klicken Sie dazu auf den
+folgenden Link:
+https://mail-settings.google.com/mail/uf-%5BANGjdJ8O_-awD5zHl5yyNTBxdBDmrqj=
+ymtyoyZyhaWsPSF4SYfFLzqqmsEdEuoOTCNHASAuZ674DC4taC44W0fL_IbBeiKDIw36dXa7Z1g=
+%5D-dPNkXT9KTjaaudmiHIdrlj5D1oo
+
+Weitere Informationen zu den Gr=C3=BCnden, aus denen Sie diese Nachricht
+erhalten haben k=C3=B6nnten, erhalten Sie hier:
+http://support.google.com/mail/bin/answer.py?answer=3D184973.
+
+Antworten Sie bitte nicht auf diese Nachricht. Wenn Sie das
+Google.de-Team kontaktieren m=C3=B6chten, melden Sie sich bitte in Ihrem
+Konto an und klicken Sie oben auf einer Seite auf "Hilfe". Klicken Sie
+dann auf "Kontakt" unten in der Hilfe.
